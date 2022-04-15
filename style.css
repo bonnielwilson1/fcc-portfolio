@@ -50,30 +50,36 @@ font-family: 'Questrial', sans-serif;  */
       font-size: 2.2rem;
       font-family: 'Questrial', sans-serif;
       padding: 2rem 5rem;
+
   }
   .nav-list a:hover {
-    color: var(--bright-cyan);
+    color: var(--light-gray);
+    background-color: #E71E7D;
+    transition: all .2s ease-in-out ;
+    border-radius: 50% 50% 0 0 ;
   }
 
  
   
   /* WELCOME SECTION */
-  .welcome-section {
+  .welcome-section  {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 100%;
+    align-items: center;
+    width: 100vw;
     height: 100vh;
     background-color: #2B40E7;
     background-image: linear-gradient(62deg, #2B40E7 0%, #1CE1E3 100%);
       
   }
     
-  h1 {
+  .welcome-section h1 {
     font-size: 6rem;
     font-family: 'Montserrat Alternates', sans-serif;
     text-align: center;
-    color: var(--bright-yellow)
+    color: var(--bright-yellow);
+    margin: auto;
 
   }
   .welcome-section p {
@@ -82,18 +88,19 @@ font-family: 'Questrial', sans-serif;  */
       font-family: 'Montserrat Alternates', sans-serif;
       text-align: center;
       color: var(--light-gray);
+      margin: auto;
+      padding-top: 2rem;
   }
 
   /* BUTTON */
 .button {
     font-size: 5rem;
     background-color:#2B40E7;
-    position:absolute;
-    left: 40%;
-    top: 70%;
     box-shadow: 0px 2px 10px var(--bright-yellow);
     padding: 0 1.5rem;
     border-radius: 50%;
+    margin-top: 10rem;
+    
 }
 .button a {
     color:#F1E02A
@@ -154,3 +161,136 @@ font-family: 'Questrial', sans-serif;  */
     }
 
   }
+
+  /* PROJECTS */
+  .projects-section > h2 {
+    font-family: 'Questrial', sans-serif;
+    margin: auto;
+    width: 100%;
+    text-align: center;
+    padding: 20rem 0 20rem 0 ;
+    font-size: 10rem;
+    
+    color:#E71E7D;
+    text-shadow: 2px 2px var(--bright-blue);
+  }
+  .projects-section {
+    background-image: linear-gradient(
+  180deg,
+  hsl(56deg 99% 62%) 0%,
+  hsl(49deg 100% 59%) 11%,
+  hsl(43deg 100% 58%) 22%,
+  hsl(35deg 100% 60%) 33%,
+  hsl(27deg 100% 62%) 44%,
+  hsl(16deg 100% 64%) 56%,
+  hsl(4deg 100% 67%) 67%,
+  hsl(351deg 100% 64%) 78%,
+  hsl(341deg 95% 59%) 89%,
+  hsl(332deg 81% 51%) 100%);
+
+  }
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 4rem;
+    width: 100%;
+    max-width: 1280px;
+    margin: 1rem auto;
+    margin-bottom: 6rem;
+    
+}
+.project-image {
+    height: calc(100% - 5rem);
+    width: 100%;
+    object-fit: cover;
+    
+    
+  }
+  .project-image:hover{
+      opacity: 50%;
+      transition: all .4s ease-in-out ;
+
+      
+  }
+  .project-title {
+    font-size: 1.5rem;
+    padding: 1.5rem 0.5rem;
+    color:#F7F6F8;
+    text-align: center;
+    font-family: 'Questrial', sans-serif;
+    
+    
+    
+  }
+  .project-title:hover  {
+    background-color: #F1E02A;
+  }
+
+  @media (max-width: 30.625em) {
+    .projects-section {
+      padding: 6rem 1rem;
+    }
+  
+    .projects-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  .project {
+    background-color:#2B40E7;
+    box-shadow: 1px 1px 2px var(--bright-blue)(0, 0, 0, 0.9);
+    border-radius: 6px;
+  }
+  
+  .code {
+    color:#2B40E7;
+    transition: color 0.3s ease-out;
+  }
+  
+  .project:hover .code {
+    color:#1CE1E3;
+    transition: all .1s ease-in-out ;
+    
+  }
+  .contact-section {
+    border-top: 5px solid var(--light-gray);
+  }
+  .contact-section, footer {
+      background-color:#2B40E7;
+      color: #F7F6F8;
+      font-family: 'Questrial', sans-serif;
+      
+  }
+  .contact-section h2{
+      text-align: center;
+      font-size: 4em;
+      padding: 2rem 0;
+      letter-spacing: 6px;
+  }
+  .contact-links {
+    margin: auto;
+    width: 90%;
+    text-align: center;
+    padding-bottom: 5rem;
+  }
+  .contact-links a {
+      color:#f0f0f0;
+      font-size: 2rem;
+      padding: 1rem 3rem;
+      
+     
+  }
+  .contact-links a:hover {
+      color: #E71E7D;
+      background-color: #F7F6F8;
+      border-radius: 50px;
+      transition: all .1s ease-in-out ;
+  }
+
+ footer {
+     text-align: center;
+     padding: 1rem;
+     line-height: 2rem;
+ }
+ footer a {
+     color: white;
+ }
